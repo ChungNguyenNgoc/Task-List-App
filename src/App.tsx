@@ -1,8 +1,32 @@
-import React from "react";
+import React, { FC } from "react";
+import { useSelector } from "react-redux";
 import "./App.css";
+import CreateNewList from "./components/CreateNewList";
+import Header from "./components/Header";
+import Notification from "./components/Notification";
+import Sidebar from "./components/Sidebar";
+import { RootState } from "./store/store";
 
-function App() {
-  return <div className="App"></div>;
-}
+const App: FC = () => {
+  const notificationMsg = useSelector(
+    (state: RootState) => state.notification.message
+  );
+
+  return (
+    <div className="App">
+      <Header
+        title="Task List App"
+        subtitle="Create some lists and add some tasks to each list"
+      />
+      <div className="container px-5">
+        <div className="columns">
+          <Sidebar />
+        </div>
+      </div>
+
+      <Notification msg={notificationMsg} />
+    </div>
+  );
+};
 
 export default App;
