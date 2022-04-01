@@ -143,7 +143,7 @@ export type ListsAction = AddListAction | GetListsAction | GetListByIdAction | S
 export type NotificationAction = SetNotificationAction;
 
 export interface ListState {
-    list: Lists;
+    lists: Lists;
     listIdToDelete: string;
     listToEdit: List | null;
     listById: List | null;

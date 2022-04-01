@@ -1,5 +1,5 @@
 .App {
-  text-align: center;
+  /* text-align: center; */
 }
 
 .App-logo {
@@ -35,4 +35,39 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.notification {
+  position: fixed;
+  top: 28px;
+  left: 20px;
+  max-width: 300px;
+}
+
+.panel-block {
+  align-items: center;
+  color: #363636;
+  display: flex;
+  justify-content: flex-start;
+  padding: 0.5em 0.75em;
+  position: relative;
+}
+
+.panel-icon {
+  display: inline-block;
+  font-size: 14px;
+  height: 1em;
+  line-height: 1em;
+  text-align: center;
+  vertical-align: top;
+  width: 1em;
+  color: #7a7a7a;
+  margin-right: 1.75em;
+  position: absolute;
+  right: 0;
+  cursor: pointer;
+}
+
+.list-name {
+  cursor: pointer;
 }

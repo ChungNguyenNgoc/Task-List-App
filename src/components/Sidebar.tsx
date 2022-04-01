@@ -7,7 +7,7 @@ const Sidebar: FC = () => {
   return (
     <div className="column is-3">
       <CreateNewList />
-      {/* <Lists /> */}
+      <Lists />
     </div>
   );
 };

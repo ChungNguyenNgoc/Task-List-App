@@ -1,7 +1,10 @@
+import { useEffect } from 'react';
+import { useDispatch } from 'react-redux';
+import { getLists } from '../actions';
 import {ListsAction, ListState, Lists, ADD_LIST, GET_LISTS, GET_LIST_BY_ID, SET_LISTID_TO_DELETE, SET_LIST_TO_EDIT, DELETE_LIST, UPDATE_LIST} from '../constant/types';
 
 const initialState: ListState = {
-    list: {},
+    lists: {},
     listIdToDelete: '',
     listToEdit: null,
     listById: null,
@@ -33,12 +36,12 @@ export default (state = initialState, action: ListsAction): ListState => {
             saveListsToLS(clonedListsFromLS);
             return {
                 ...state,
-                list: clonedListsFromLS
+                lists: clonedListsFromLS
             }
         case GET_LISTS:
             return {
                 ...state,
-                list: listsFromLS
+                lists: listsFromLS
             }
         case GET_LIST_BY_ID:
             const list = listsFromLS[action.payload];
@@ -64,7 +67,7 @@ export default (state = initialState, action: ListsAction): ListState => {
             saveListsToLS(clonedListsFromLS2);
             return {
                 ...state,
-                list: clonedListsFromLS2,
+                lists: clonedListsFromLS2,
                 listIdToDelete: '',
                 listById: null,
                 selectedList: state.selectedList && listId === state.selectedList.id ? null : state.selectedList
@@ -75,7 +78,7 @@ export default (state = initialState, action: ListsAction): ListState => {
             saveListsToLS(clonedListsFromLS3);
             return {
                 ...state,
-                list: clonedListsFromLS3,
+                lists: clonedListsFromLS3,
                 listToEdit: null
             }
 
