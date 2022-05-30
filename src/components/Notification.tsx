@@ -42,7 +42,7 @@ const Notification: FC<NotificationProps> = ({ msg }) => {
           : "notification is-hidden"
       }
     >
-      <button className="delete" onClick={closeNotification}></button>
+      <button aria-label="Name" className="delete" onClick={closeNotification}></button>
       <p>{msg}</p>
     </div>
   );

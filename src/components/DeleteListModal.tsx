@@ -15,7 +15,7 @@ interface DeleteListModalProps {
 
 const DeleteListModal: FC<DeleteListModalProps> = ({ listId }) => {
   const dispatch = useDispatch();
-  const list = useSelector((state: RootState) => state.list.listById);
+  const list = useSelector((state: RootState) => state.listRdr.listById);
   useEffect(() => {
     dispatch(getListById(listId));
   }, [dispatch, listId]);

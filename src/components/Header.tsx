@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import React, { FC } from "react";
 
 interface HeaderProps {
   title: string;
@@ -16,6 +16,6 @@ const Header: FC<HeaderProps> = ({ title, subtitle }) => {
       </div>
     </header>
   );
-}
+};
 
 export default Header;

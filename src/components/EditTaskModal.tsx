@@ -21,7 +21,7 @@ const EditTaskModal: FC<EditTaskModalProps> = ({
       <form className="modal-card">
         <header className="modal-card-head">
           <p className="modal-card-title">Edit Task</p>
-          <button type="button" className="delete"></button>
+          <button aria-label="Name" type="button" className="delete"></button>
         </header>
         <div className="modal-card-body">
           <div className="field">

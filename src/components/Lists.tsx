@@ -10,7 +10,7 @@ import {
 import { List } from "../store/constant/types";
 
 const Lists: FC = () => {
-  const lists = useSelector((state: RootState) => state.list.lists);
+  const lists = useSelector((state: RootState) => state.listRdr.lists);
   const dispatch = useDispatch();
 
   useEffect(() => {

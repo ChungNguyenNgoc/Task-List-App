@@ -42,7 +42,7 @@ const EditListModal: FC<EditListModalProps> = ({ list }) => {
       <form className="modal-card" onSubmit={submitHandler}>
         <header className="modal-card-head">
           <p className="modal-card-title">Edit List</p>
-          <button
+          <button aria-label="Name"
             type="button"
             className="delete"
             onClick={hideModalHandler}

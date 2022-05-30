@@ -4,7 +4,7 @@ import listReducer from './reducer/listReducer';
 import notificationReducer from './reducer/notificationReducer';
 
 const rootReducer = combineReducers({
-    list: listReducer,
+    listRdr: listReducer,
     notification: notificationReducer,
 });
 declare global {
